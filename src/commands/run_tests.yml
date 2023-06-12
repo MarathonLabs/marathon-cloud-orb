@@ -1,10 +1,10 @@
 description: >
   Run tests using marathon-cloud cli (cli must be installed first)
 parameters:
-  apiKey:
+  apiKeyEnvVar:
     type: string
     description: >
-      API key for authenticating with Marathon Cloud
+      Environment variable name with API key for authenticating with Marathon Cloud
   application:
     type: string
     description: >
@@ -21,7 +21,7 @@ steps:
   - run:
       name: Run tests using marathon-cloud
       environment:
-        ORB_API_KEY: <<parameters.apiKey>>
+        ORB_API_KEY_ENV_VAR: <<parameters.apiKeyEnvVar>>
         ORB_APPLICATION: <<parameters.application>>
         ORB_TEST_APPLICATION: <<parameters.testApplication>>
         ORB_OUTPUT: <<parameters.output>>
