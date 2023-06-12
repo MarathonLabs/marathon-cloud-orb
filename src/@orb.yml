@@ -1,8 +1,8 @@
 version: 2.1
 description: >
   With this action you can easily run your Android instrumentation tests.
-  Marathon Cloud is designed to run all your automated tests in just 15 minutes, 
+  Marathon Cloud is designed to run all your automated tests in just 15 minutes,
   no matter how many tests you have.
 display:
-  home_url: https://marathonlabs.io
+  home_url: "https://marathonlabs.io"
   source_url: "https://github.com/MarathonLabs/marathon-cloud-orb"
