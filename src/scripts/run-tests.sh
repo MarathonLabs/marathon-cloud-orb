@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-API_KEY=$(eval "echo $ORB_API_KEY_ENV_VAR")
+API_KEY=$(eval echo \$$ORB_API_KEY_ENV_VAR)
 echo "$ORB_API_KEY_ENV_VAR"
 echo "$API_KEY"
 
