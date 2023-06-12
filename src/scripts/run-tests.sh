@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
-marathon-cloud -api-key "$ORB_API_KEY" -apk "$ORB_APPLICATION" -testapk "$ORB_TEST_APPLICATION" -o "$ORB_OUTPUT"
+API_KEY=$(eval "echo $ORB_API_KEY_ENV_VAR")
+
+marathon-cloud -api-key "$API_KEY" -apk "$ORB_APPLICATION" -testapk "$ORB_TEST_APPLICATION" -o "$ORB_OUTPUT"
