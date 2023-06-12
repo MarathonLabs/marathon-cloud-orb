@@ -1,13 +1,15 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Run a job inside the marathon-cloud cli container, via this orb's executor.
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    marathon-cloud: marathonlabs/marathon-cloud-orb@x.y.z
+  jobs:
+    run-tests-using-marathon-cloud:
+      executor: marathon-cloud/default
+      steps:
+        - marathon-cloud/run-tests
   workflows:
-    use-my-orb:
+    marathon-cloud-orb-example:
       jobs:
-        - <orb-name>/<job-name>
+        - run-tests-using-marathon-cloud

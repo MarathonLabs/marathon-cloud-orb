@@ -1,0 +1,28 @@
+description: >
+  Run tests using marathon-cloud cli (cli must be installed first)
+parameters:
+  apiKey:
+    type: string
+    description: >
+      API key for authenticating with Marathon Cloud
+  application:
+    type: string
+    description: >
+      Application binary path, e.g. apk file for Android
+  testApplication:
+    type: string
+    description: >
+      Test application binary path, e.g. apk file for Android
+  output:
+    type: string
+    default: "marathon"
+    description: "Output folder"
+steps:
+  - run:
+      name: Run tests using marathon-cloud
+      environment:
+        ORB_API_KEY: <<parameters.apiKey>>
+        ORB_APPLICATION: <<parameters.application>>
+        ORB_TEST_APPLICATION: <<parameters.testApplication>>
+        ORB_OUTPUT: <<parameters.output>>
+      command: <<include(scripts/run-tests.sh)>>
