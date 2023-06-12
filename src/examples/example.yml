@@ -8,7 +8,10 @@ usage:
     run-tests-using-marathon-cloud:
       executor: marathon-cloud/default
       steps:
-        - marathon-cloud/run_tests
+        - marathon-cloud/run_tests:
+            apiKeyEnvVar: MARATHON_CLOUD_API_TOKEN # don't forget to add a token
+            application: app/build/outputs/apk/debug/app-debug.apk
+            testApplication: app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
   workflows:
     marathon-cloud-orb-example:
       jobs:
