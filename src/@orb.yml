@@ -1,15 +1,8 @@
 version: 2.1
-
 description: >
-  Sample orb description
-# What will your orb allow users to accomplish?
-# Descriptions should be short, simple, and informative.
-
-# This information will be displayed in the orb registry and is not mandatory.
+  With this action you can easily run your Android instrumentation tests.
+  Marathon Cloud is designed to run all your automated tests in just 15 minutes,
+  no matter how many tests you have.
 display:
-  home_url: "https://www.example.com/docs"
+  home_url: "https://marathonlabs.io"
   source_url: "https://github.com/MarathonLabs/marathon-cloud-orb"
-
-# If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
-# orbs:
-#  hello: circleci/hello-build@0.0.5
