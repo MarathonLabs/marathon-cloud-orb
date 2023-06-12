@@ -8,7 +8,7 @@ usage:
     run-tests-using-marathon-cloud:
       executor: marathon-cloud/default
       steps:
-        - marathon-cloud/run-tests
+        - marathon-cloud/run_tests
   workflows:
     marathon-cloud-orb-example:
       jobs:
