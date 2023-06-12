@@ -1,0 +1,7 @@
+description: >
+  Print help of marathon-cloud cli (cli must be installed first)
+parameters:
+steps:
+  - run:
+      name: Print help of marathon-cloud
+      command: <<include(scripts/print-help.sh)>>
