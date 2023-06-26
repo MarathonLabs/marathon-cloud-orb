@@ -12,6 +12,7 @@ usage:
             apiKeyEnvVar: MARATHON_CLOUD_API_TOKEN # don't forget to add a token
             application: app/build/outputs/apk/debug/app-debug.apk
             testApplication: app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+            platform: Android
   workflows:
     marathon-cloud-orb-example:
       jobs:

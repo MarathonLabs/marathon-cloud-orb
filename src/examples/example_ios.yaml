@@ -1,0 +1,19 @@
+description: >
+  Run a job inside the marathon-cloud cli container, via this orb's executor.
+usage:
+  version: 2.1
+  orbs:
+    marathon-cloud: marathonlabs/marathon-cloud-orb@x.y.z
+  jobs:
+    run-tests-using-marathon-cloud:
+      executor: marathon-cloud/default
+      steps:
+        - marathon-cloud/run_tests:
+            apiKeyEnvVar: MARATHON_CLOUD_API_TOKEN # don't forget to add a token
+            application: /home/user/workspace/sample.zip
+            testApplication: /home/user/workspace/sampleUITests-Runner.zip
+            platform: iOS
+  workflows:
+    marathon-cloud-orb-example:
+      jobs:
+        - run-tests-using-marathon-cloud

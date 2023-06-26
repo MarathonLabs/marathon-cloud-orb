@@ -8,11 +8,15 @@ parameters:
   application:
     type: string
     description: >
-      Application binary path, e.g. apk file for Android
+      Application binary path, e.g. apk file for Android or zip file of iOS Application
   testApplication:
     type: string
     description: >
-      Test application binary path, e.g. apk file for Android
+      Test application binary path, e.g. apk file for Android or zip file of iOS Test Runner app
+  platform:
+    type: string
+    description: >
+      Testing platform. Android or iOS only
   output:
     type: string
     default: "marathon"
@@ -24,5 +28,6 @@ steps:
         ORB_API_KEY_ENV_VAR: <<parameters.apiKeyEnvVar>>
         ORB_APPLICATION: <<parameters.application>>
         ORB_TEST_APPLICATION: <<parameters.testApplication>>
+        ORB_PLATFORM: <<parameters.platform>>
         ORB_OUTPUT: <<parameters.output>>
       command: <<include(scripts/run-tests.sh)>>

@@ -35,6 +35,7 @@ jobs:
       #     apiKeyEnvVar: MARATHON_CLOUD_API_TOKEN
       #     application: app.apk
       #     testApplication: appTest.apk
+      #     platform: Android
   print-help-test:
     executor: marathon-cloud-orb/default
     steps:
