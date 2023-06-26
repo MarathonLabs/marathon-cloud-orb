@@ -16,7 +16,7 @@ parameters:
   platform:
     type: string
     description: >
-      Testing platform. Android or iOS only  
+      Testing platform. Android or iOS only
   output:
     type: string
     default: "marathon"
