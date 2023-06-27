@@ -8,11 +8,11 @@ parameters:
   application:
     type: string
     description: >
-      Application binary path, e.g. apk file for Android or zip file of iOS Application
+      Application binary path, e.g. apk file for Android or zip/ipa file of iOS Application
   testApplication:
     type: string
     description: >
-      Test application binary path, e.g. apk file for Android or zip file of iOS Test Runner app
+      Test application binary path, e.g. apk file for Android or zip/ipa file of iOS Test Runner app
   platform:
     type: string
     description: >
