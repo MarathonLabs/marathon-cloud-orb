@@ -37,7 +37,7 @@ jobs:
            testApplication: appTest.apk
            platform: Android
            osVersion: "10"
-           name: "Android Test"
+           runName: "Android Test"
            link: "some commit"
   print-help-test:
     executor: marathon-cloud-orb/default
