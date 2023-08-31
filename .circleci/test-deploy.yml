@@ -27,15 +27,18 @@ jobs:
     steps:
       - run:
           command: echo skip
-      # - run:
-      #     command: wget https://cloud.marathonlabs.io/samples/android/app.apk
-      # - run:
-      #     command: wget https://cloud.marathonlabs.io/samples/android/appTest.apk
-      # - marathon-cloud-orb/run_tests:
-      #     apiKeyEnvVar: MARATHON_CLOUD_API_TOKEN
-      #     application: app.apk
-      #     testApplication: appTest.apk
-      #     platform: Android
+#       - run:
+#           command: wget https://cloud.marathonlabs.io/samples/android/app.apk
+#       - run:
+#           command: wget https://cloud.marathonlabs.io/samples/android/appTest.apk
+#       - marathon-cloud-orb/run_tests:
+#           apiKeyEnvVar: MARATHON_CLOUD_API_TOKEN
+#           application: app.apk
+#           testApplication: appTest.apk
+#           platform: Android
+#           osVersion: "10"
+#           runName: "Android Test"
+#           link: "some commit"
   print-help-test:
     executor: marathon-cloud-orb/default
     steps:
