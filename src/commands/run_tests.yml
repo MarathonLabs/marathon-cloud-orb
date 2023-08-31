@@ -27,7 +27,7 @@ parameters:
     default: ""
     description: >
       Link to commit
-  name:
+  runName:
     type: string
     default: ""
     description: >
@@ -46,6 +46,6 @@ steps:
         ORB_PLATFORM: <<parameters.platform>>
         ORB_OS_VERSION: <<parameters.osVersion>>
         ORB_LINK: <<parameters.link>>
-        ORB_NAME: <<parameters.name>>
+        ORB_NAME: <<parameters.runName>>
         ORB_OUTPUT: <<parameters.output>>
       command: <<include(scripts/run-tests.sh)>>
