@@ -16,4 +16,5 @@ if [ -n "$ORB_NAME" ]; then
     command="$command -name \"$ORB_NAME\""
 fi
 
+echo "Executing command: $command"
 eval "$command"
