@@ -36,7 +36,7 @@ jobs:
            application: app.apk
            testApplication: appTest.apk
            platform: Android
-           osVersion: 10.0
+           osVersion: "10"
            name: "Android Test"
            link: "some commit"
   print-help-test:
