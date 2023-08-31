@@ -17,6 +17,21 @@ parameters:
     type: string
     description: >
       Testing platform. Android or iOS only
+  osVersion:
+    type: string
+    default: ""
+    description: >
+      Android or iOS OS version
+  link:
+    type: string
+    default: ""
+    description: >
+      Link to commit
+  name:
+    type: string
+    default: ""
+    description: >
+      Name for run, for example it could be description of commit
   output:
     type: string
     default: "marathon"
@@ -29,5 +44,8 @@ steps:
         ORB_APPLICATION: <<parameters.application>>
         ORB_TEST_APPLICATION: <<parameters.testApplication>>
         ORB_PLATFORM: <<parameters.platform>>
+        ORB_OS_VERSION: <<parameters.osVersion>>
+        ORB_LINK: <<parameters.link>>
+        ORB_NAME: <<parameters.name>>
         ORB_OUTPUT: <<parameters.output>>
       command: <<include(scripts/run-tests.sh)>>
